@@ -1,0 +1,98 @@
+# 本地环境变量与覆盖配置；安全模板必须允许提交。
+.env
+.env.*
+**/.env
+**/.env.*
+!.env.example
+!**/.env.example
+*.env.local
+
+# 私钥、证书和其他常见凭据载体。
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+
+# 运行时会话、Agent 日志和本地数据库不得进入版本控制。
+/runtime/
+/log/
+/data/recall_index/
+/data/knowledge_images/
+/data/test_records/
+*.db
+*.sqlite
+*.sqlite3
+
+# Python 虚拟环境、缓存、覆盖率和构建产物。
+.venv/
+venv/
+**/.venv/
+**/venv/
+__pycache__/
+**/__pycache__/
+*.py[cod]
+.pytest_cache/
+**/.pytest_cache/
+.ruff_cache/
+**/.ruff_cache/
+.mypy_cache/
+**/.mypy_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# 进程内存转储和临时文件可能包含敏感内存。
+core
+core.*
+core-*
+*.core
+*.tmp
+*.swp
+
+# 本地编辑器、系统和 AI 工具配置。
+.DS_Store
+.idea/
+.vscode/
+# 保留本地 AI 配置，但放行已审批的仓库级交互记忆 Skill。
+/.agents/*
+!/.agents/skills/
+/.agents/skills/*
+!/.agents/skills/managing-user-interaction-memory/
+!/.agents/skills/managing-user-interaction-memory/**
+/.codex/
+
+# Public GitHub export: keep internal material and personal artifacts private
+/docs/
+/.planning/
+/.agents/
+/AGENTS.md
+/plan.md
+/CHANGELOG.md
+*.docx
+*.pdf
+
+# Do not publish environment templates or local configuration files
+**/.env.example
+**/.env.*
+*.local
+docker-compose*.yml
+docker-compose*.yaml
+application*.yml
+application*.yaml
+application*.properties
+*.ini
+*.conf
+*.cfg
+
+# Do not publish credentials or private material
+*secret*
+*credential*
+*password*
+*token*
+*.pem
+*.key
+*.p12
+*.pfx
