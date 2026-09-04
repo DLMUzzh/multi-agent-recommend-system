@@ -72,6 +72,9 @@ core-*
 /plan.md
 /CHANGELOG.md
 /python/assess/README.md
+/Test/
+/data/
+/scripts/
 *.docx
 *.pdf
 
